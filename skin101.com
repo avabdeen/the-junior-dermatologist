@@ -65,7 +65,7 @@
             <h2>Ask an Anonymous Skin Question</h2>
             <p>Curious about a specific skin condition, cell function, or active ingredient? Submit your question completely anonymously. Selected questions will be analyzed and answered in future portfolio updates.</p>
             
-            <form action="https://formspree.io/f/placeholder" method="POST">
+            <form action="https://formspree.io/f/mjgznjor" method="POST">
                 <textarea name="anonymous-question" placeholder="Type your clinical or general skin question here..." required></textarea>
                 <button type="submit" class="submit-btn">Submit Question</button>
             </form>
