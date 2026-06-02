@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin 101 | The Junior Dermatologist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --clinical-white: #FFFFFF;
+            --scrub-blue: #0A2540;
+            --teal-accent: #4FA3A5;
+            --soft-grey: #F4F7F6;
+            --text-main: #333333;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Roboto', sans-serif;
+        }
+        body { font-family: var(--font-body); background-color: var(--soft-grey); color: var(--text-main); line-height: 1.6; margin: 0; padding: 0; }
+        header { background-color: var(--clinical-white); padding: 20px 50px; border-bottom: 3px solid var(--scrub-blue); display: flex; justify-content: space-between; align-items: center; }
+        .site-title { font-family: var(--font-heading); font-size: 24px; color: var(--scrub-blue); text-decoration: none; font-weight: 600; }
+        nav a { text-decoration: none; color: var(--scrub-blue); font-weight: 400; }
+        .container { max-width: 1000px; margin: 50px auto; padding: 0 20px; }
+        
+        h1, h2 { font-family: var(--font-heading); color: var(--scrub-blue); }
+        h1 { font-size: 38px; text-align: center; margin-bottom: 10px; }
+        .subtitle { text-align: center; color: #666; font-weight: 300; margin-bottom: 40px; }
+
+        /* Anonymous Q&A Section */
+        .qa-box { background: var(--clinical-white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 50px; border-top: 4px solid var(--teal-accent); }
+        .qa-box p { font-weight: 300; margin-top: 0; }
+        textarea { width: 100%; height: 100px; padding: 15px; border: 1px solid #E0E0E0; border-radius: 4px; font-family: var(--font-body); font-size: 15px; resize: none; box-sizing: border-box; margin-bottom: 15px; }
+        textarea:focus { border-color: var(--teal-accent); outline: none; }
+        .submit-btn { background-color: var(--scrub-blue); color: var(--clinical-white); border: none; padding: 12px 25px; border-radius: 4px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+        .submit-btn:hover { background-color: var(--teal-accent); }
+
+        /* Scrollable Row Section */
+        .scroll-section-title { font-size: 24px; margin-bottom: 20px; border-bottom: 1px solid #E0E0E0; padding-bottom: 10px; }
+        .scroll-container { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+        
+        /* Custom Scrollbar for the row */
+        .scroll-container::-webkit-scrollbar { height: 8px; }
+        .scroll-container::-webkit-scrollbar-track { background: #E0E0E0; border-radius: 4px; }
+        .scroll-container::-webkit-scrollbar-thumb { background: var(--teal-accent); border-radius: 4px; }
+
+        /* Card Styling (5 Boxes) */
+        .faq-card { flex: 0 0 300px; background: var(--clinical-white); padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-left: 4px solid var(--scrub-blue); display: flex; flex-direction: column; justify-content: space-between; }
+        .faq-card h3 { font-family: var(--font-heading); color: var(--scrub-blue); margin-top: 0; font-size: 18px; min-height: 50px; }
+        .faq-card p { font-weight: 300; font-size: 14px; margin-bottom: 0; color: #555; }
+
+        footer { background-color: var(--scrub-blue); color: rgba(255,255,255,0.7); padding: 30px; text-align: center; font-size: 14px; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="site-title">THE JUNIOR DERMATOLOGIST</a>
+        <nav><a href="index.html">← Back to Home</a></nav>
+    </header>
+
+    <main class="container">
+        <h1>Skin 101</h1>
+        <div class="subtitle">An interactive space for clear, evidence-based dermatological science.</div>
+
+        <section class="qa-box">
+            <h2>Ask an Anonymous Skin Question</h2>
+            <p>Curious about a specific skin condition, cell function, or active ingredient? Submit your question completely anonymously. Selected questions will be analyzed and answered in future portfolio updates.</p>
+            
+            <form action="https://formspree.io/f/placeholder" method="POST">
+                <textarea name="anonymous-question" placeholder="Type your clinical or general skin question here..." required></textarea>
+                <button type="submit" class="submit-btn">Submit Question</button>
+            </form>
+        </section>
+
+        <h2 class="scroll-section-title">Common Questions & Core Concepts</h2>
+        <section class="scroll-container">
+            
+            <div class="faq-card">
+                <h3>What is the absolute difference between skin purging and a regular breakout?</h3>
+                <p>Purging occurs when an active ingredient (like a retinoid) speeds up cellular turnover, quickly pushing pre-existing clogged pores to the surface. A regular breakout is new inflammation caused by clogged pores or irritation.</p>
+            </div>
+
+            <div class="faq-card">
+                <h3>Why does hot water damage the skin barrier if it feels clean?</h3>
+                <p>High temperatures emulsify and strip away the essential intercellular lipids (ceramides, cholesterol, and fatty acids) that glue your epidermal cells together. This induces trans-epidermal water loss (TEWL), leaving skin dehydrated and exposed to pathogens.</p>
+            </div>
+
+            <div class="faq-card">
+                <h3>What biological role do antioxidants play against skin aging?</h3>
+                <p>Antioxidants (like Vitamin C) donate electrons to unstable molecules called free radicals. This neutralizes them before they can attack and break down structural dermal collagen proteins and cellular DNA.</p>
+            </div>
+
+            <div class="faq-card">
+                <h3>How do chemical exfoliants differ from physical scrubs?</h3>
+                <p>Physical scrubs use abrasive particles to tear away dead skin cells manually, which can cause micro-tears. Chemical exfoliants (like AHAs or BHAs) work by gently dissolving the chemical bonds holding dead cells together, causing them to shed smoothly.</p>
+            </div>
+
+            <div class="faq-card">
+                <h3>Why do some topical ingredients cause skin irritation or contact dermatitis?</h3>
+                <p>When an ingredient penetrates the stratum corneum and is recognized as a foreign invader, it triggers a localized T-cell immune response. This cellular defense releases histamines and cytokines, resulting in redness, swelling, and itching.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>This website is for educational and science communication purposes only. The content does not constitute medical advice.</p>
+    </footer>
+
+</body>
+</html>
