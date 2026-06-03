@@ -5,14 +5,9 @@
     <link rel="icon" type="image/png" href="tjd.png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     
+    <link rel="stylesheet" href="style.css">
+    
     <style>
-        /* Base Reset to prevent page shaking */
-        body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
         /* Container that keeps Browse Topics and its Sidebar tethered together */
         .nav-dropdown-container {
             position: relative;
@@ -27,21 +22,21 @@
             width: 300px;
             height: 100%;
             background-color: #ffffff;
-            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            box-shadow: -5px 0 15px rgba(0,0,0,0.15);
             padding: 40px 30px;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
             gap: 20px;
             z-index: 9999;
-            transition: right 0.3s ease-in-out; /* Smooth sliding movement */
-            pointer-events: none; /* Stops accidental triggers when hidden */
+            transition: right 0.3s ease-in-out;
+            pointer-events: none;
         }
 
-        /* THE MAGIC HOVER TRIGGER: When mouse hovers over the container, slide the menu out! */
+        /* When mouse hovers over the container, slide the menu out! */
         .nav-dropdown-container:hover .right-sidebar {
             right: 0;
-            pointer-events: auto; /* Allows you to click the links inside */
+            pointer-events: auto;
         }
 
         /* Title inside the slide-out sidebar */
@@ -64,6 +59,7 @@
             padding: 8px 0;
             border-bottom: 1px dashed #E0E0E0;
             user-select: none;
+            text-align: left;
         }
     </style>
 </head>
